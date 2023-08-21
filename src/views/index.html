@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CourseCity | Cursos Onlinme</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles/styles.css" />
+  </head>
+  <body>
+    <header id="header" class="header">
+      <div class="header__contenedor">
+        <div class="header__barra">
+          <h2 class="logo">
+            <a href="index.html" class="logo__titulo">CourseCity</a>
+          </h2>
+
+          <button class="hamburguer">
+            <svg
+              class="hamburguer__icon"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.5"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+              aria-hidden="true"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+              ></path>
+            </svg>
+          </button>
+          <nav class="nav">
+            <a href="" class="nav__link">Inicio</a>
+            <a href="" class="nav__link">Nosotros</a>
+            <a href="" class="nav__link">Cursos</a>
+            <ul class="nav__link cart">
+              <li class="cart__submenu">
+                <svg
+                  id="img-cart"
+                  class="cart__icon"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                  aria-hidden="true"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 00-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 00-16.536-1.84M7.5 14.25L5.106 5.272M6 20.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm12.75 0a.75.75 0 11-1.5 0 .75.75 0 011.5 0z"
+                  ></path>
+                </svg>
+                <div class="cart__list" id="cart">
+                  <table id="lista-carrito" class="cart__list--products">
+                    <thead>
+                      <tr>
+                        <th class="cart__list--head">Imagen</th>
+                        <th class="cart__list--head">Nombre</th>
+                        <th class="cart__list--head">Precio</th>
+                        <th class="cart__list--head">Cantidad</th>
+                        <th></th>
+                      </tr>
+                    </thead>
+                    <tbody></tbody>
+                  </table>
+
+                  <a href="#" id="vaciar-carrito" class="cart__btn"
+                    >Vaciar Carrito</a
+                  >
+                </div>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+      <section class="hero"></section>
+    </header>
+    <main class="main">
+      <section class="nosotros nosotros__contenedor">
+        <div class="nosotros__imagen">
+          <picture>
+            <img
+              class="nosotros__img"
+              loading="lazy"
+              width="500"
+              height="300"
+              src="./assets/img/nosotros.jpg"
+              alt=""
+            />
+          </picture>
+        </div>
+        <div class="nosotros__texto">
+          <h2 class="nosotros__titulo">
+            <span class="nosotros__titulo--black">Explora</span>
+            Sobre nosotros
+          </h2>
+          <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Mollitia
+            nobis deserunt sapiente modi! Quod quidem vitae perspiciatis ab
+            deleniti veniam, eum cum molestiae eveniet nisi praesentium
+            cupiditate sunt vel natus.
+          </p>
+          <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officiis
+            repellat similique ullam mollitia aut aliquid? Magni perferendis
+            sapiente pariatur repudiandae tempora porro quasi officia quos
+            aliquam. Dolores rerum voluptate aliquid!
+          </p>
+        </div>
+      </section>
+      <section class="cursos">
+        <div class="categorias categorias__contenedor">
+          <h2 class="categorias__titulo">
+            <span class="categorias__titulo--black">Categorías</span>
+            Categorías populares
+          </h2>
+          <div class="categorias__grid">
+            <div class="categoria">
+              <img
+                class="categoria__img"
+                src="./assets/img/categoria1.jpg"
+                alt="Img-categoria"
+              />
+              <div class="categoria__contenido">
+                <h4 class="categoria__titulo">Programación y Diseño UX / UI</h4>
+                <p class="categoria__cantidad">120+ Cursos</p>
+              </div>
+            </div>
+            <div class="categoria">
+              <img
+                class="categoria__img"
+                src="./assets/img/categoria1.jpg"
+                alt="Img-categoria"
+              />
+              <div class="categoria__contenido">
+                <h4 class="categoria__titulo">Programación y Diseño UX / UI</h4>
+                <p class="categoria__cantidad">120+ Cursos</p>
+              </div>
+            </div>
+            <div class="categoria">
+              <img
+                class="categoria__img"
+                src="./assets/img/categoria1.jpg"
+                alt="Img-categoria"
+              />
+              <div class="categoria__contenido">
+                <h4 class="categoria__titulo">Programación y Diseño UX / UI</h4>
+                <p class="categoria__cantidad">120+ Cursos</p>
+              </div>
+            </div>
+            <div class="categoria">
+              <img
+                class="categoria__img"
+                src="./assets/img/categoria1.jpg"
+                alt="Img-categoria"
+              />
+              <div class="categoria__contenido">
+                <h4 class="categoria__titulo">Programación y Diseño UX / UI</h4>
+                <p class="categoria__cantidad">120+ Cursos</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="lista-cursos" class="cursos__contenedor">
+          <h2 class="cursos__titulo">
+            <span class="cursos__titulo--black">Curso</span>
+            Top cursos
+          </h2>
+          <div class="cursos__grid">
+            <article class="curso">
+              <img
+                class="curso__img"
+                loading="lazy"
+                width="500"
+                height="300"
+                src="./assets/img/curso1.jpg"
+                alt="Imagen-Curso"
+              />
+              <div class="curso__contenido">
+                <h3 class="curso__nombre">Diseño web con Figma</h3>
+                <p class="curso__profesor">Juan Pablo</p>
+                <div class="curso__info">
+                  <p class="curso__nota">
+                    4.5
+                    <span class="curso__nota--star">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        style="
+                          fill: rgba(247, 207, 38, 1);
+                          transform: scaleX(-1);
+                        "
+                      >
+                        <path
+                          d="M21.947 9.179a1.001 1.001 0 0 0-.868-.676l-5.701-.453-2.467-5.461a.998.998 0 0 0-1.822-.001L8.622 8.05l-5.701.453a1 1 0 0 0-.619 1.713l4.213 4.107-1.49 6.452a1 1 0 0 0 1.53 1.057L12 18.202l5.445 3.63a1.001 1.001 0 0 0 1.517-1.106l-1.829-6.4 4.536-4.082c.297-.268.406-.686.278-1.065z"
+                        ></path>
+                      </svg>
+                    </span>
+                    <span class="curso__nota--cantidad">(543)</span>
+                  </p>
+                  <p class="curso__precio">$129</p>
+                </div>
+                <a href="#" class="agregar-carrito curso__btn" data-id="1"
+                  >Agregar al carrito</a
+                >
+              </div>
+            </article>
+            <article class="curso">
+              <img
+                class="curso__img"
+                loading="lazy"
+                width="500"
+                height="300"
+                src="./assets/img/curso1.jpg"
+                alt="Imagen-Curso"
+              />
+              <div class="curso__contenido">
+                <h3 class="curso__nombre">Diseño web con Figma</h3>
+                <p class="curso__profesor">Juan Pablo</p>
+                <div class="curso__info">
+                  <p class="curso__nota">
+                    4.5
+                    <span class="curso__nota--star">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        style="
+                          fill: rgba(247, 207, 38, 1);
+                          transform: scaleX(-1);
+                        "
+                      >
+                        <path
+                          d="M21.947 9.179a1.001 1.001 0 0 0-.868-.676l-5.701-.453-2.467-5.461a.998.998 0 0 0-1.822-.001L8.622 8.05l-5.701.453a1 1 0 0 0-.619 1.713l4.213 4.107-1.49 6.452a1 1 0 0 0 1.53 1.057L12 18.202l5.445 3.63a1.001 1.001 0 0 0 1.517-1.106l-1.829-6.4 4.536-4.082c.297-.268.406-.686.278-1.065z"
+                        ></path>
+                      </svg>
+                    </span>
+                    <span class="curso__nota--cantidad">(543)</span>
+                  </p>
+                  <p class="curso__precio">$129</p>
+                </div>
+                <a href="#" class="agregar-carrito curso__btn" data-id="1"
+                  >Agregar al carrito</a
+                >
+              </div>
+            </article>
+            <article class="curso">
+              <img
+                class="curso__img"
+                loading="lazy"
+                width="500"
+                height="300"
+                src="./assets/img/curso1.jpg"
+                alt="Imagen-Curso"
+              />
+              <div class="curso__contenido">
+                <h3 class="curso__nombre">Desarrollo web</h3>
+                <p class="curso__profesor">Juan Pablo</p>
+                <div class="curso__info">
+                  <p class="curso__nota">
+                    4.5
+                    <span class="curso__nota--star">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        style="
+                          fill: rgba(247, 207, 38, 1);
+                          transform: scaleX(-1);
+                        "
+                      >
+                        <path
+                          d="M21.947 9.179a1.001 1.001 0 0 0-.868-.676l-5.701-.453-2.467-5.461a.998.998 0 0 0-1.822-.001L8.622 8.05l-5.701.453a1 1 0 0 0-.619 1.713l4.213 4.107-1.49 6.452a1 1 0 0 0 1.53 1.057L12 18.202l5.445 3.63a1.001 1.001 0 0 0 1.517-1.106l-1.829-6.4 4.536-4.082c.297-.268.406-.686.278-1.065z"
+                        ></path>
+                      </svg>
+                    </span>
+                    <span class="curso__nota--cantidad">(543)</span>
+                  </p>
+                  <p class="curso__precio">$129</p>
+                </div>
+                <a href="#" class="agregar-carrito curso__btn" data-id="2"
+                  >Agregar al carrito</a
+                >
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+      <section class="testimonials testimonials__contenedor">
+        <h2 class="testimonials__titulo">
+          <span class="testimoniales__titulo--black">Testimonios</span>
+          Opiniones de estudiantes
+        </h2>
+        <div class="testimonials__grid">
+          <div class="testimonial">
+            <div class="testimonial__head">
+              <img
+                class="testimonial__img"
+                loading="lazy"
+                width="500"
+                height="300"
+                src="./assets/img/curso1.jpg"
+                alt=""
+              />
+              <div>
+                <h4 class="testimonial__nombre">Alex Maximilian</h4>
+                <span class="testimonial__fecha">1 Febrero 2019</span>
+              </div>
+            </div>
+            <div class="testimonial__body">
+              <p class="testimonial__parrafo">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolore
+                id optio sequi beatae cumque reprehenderit eveniet minima.
+              </p>
+              <p class="testimonial__stars">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  style="fill: rgba(247, 207, 38, 1); transform: scaleX(-1)"
+                >
+                  <path
+                    d="M21.947 9.179a1.001 1.001 0 0 0-.868-.676l-5.701-.453-2.467-5.461a.998.998 0 0 0-1.822-.001L8.622 8.05l-5.701.453a1 1 0 0 0-.619 1.713l4.213 4.107-1.49 6.452a1 1 0 0 0 1.53 1.057L12 18.202l5.445 3.63a1.001 1.001 0 0 0 1.517-1.106l-1.829-6.4 4.536-4.082c.297-.268.406-.686.278-1.065z"
+                  ></path>
+                </svg>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  style="fill: rgba(247, 207, 38, 1); transform: scaleX(-1)"
+                >
+                  <path
+                    d="M21.947 9.179a1.001 1.001 0 0 0-.868-.676l-5.701-.453-2.467-5.461a.998.998 0 0 0-1.822-.001L8.622 8.05l-5.701.453a1 1 0 0 0-.619 1.713l4.213 4.107-1.49 6.452a1 1 0 0 0 1.53 1.057L12 18.202l5.445 3.63a1.001 1.001 0 0 0 1.517-1.106l-1.829-6.4 4.536-4.082c.297-.268.406-.686.278-1.065z"
+                  ></path>
+                </svg>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  style="fill: rgba(247, 207, 38, 1); transform: scaleX(-1)"
+                >
+                  <path
+                    d="M21.947 9.179a1.001 1.001 0 0 0-.868-.676l-5.701-.453-2.467-5.461a.998.998 0 0 0-1.822-.001L8.622 8.05l-5.701.453a1 1 0 0 0-.619 1.713l4.213 4.107-1.49 6.452a1 1 0 0 0 1.53 1.057L12 18.202l5.445 3.63a1.001 1.001 0 0 0 1.517-1.106l-1.829-6.4 4.536-4.082c.297-.268.406-.686.278-1.065z"
+                  ></path>
+                </svg>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  style="fill: rgba(247, 207, 38, 1); transform: scaleX(-1)"
+                >
+                  <path
+                    d="M21.947 9.179a1.001 1.001 0 0 0-.868-.676l-5.701-.453-2.467-5.461a.998.998 0 0 0-1.822-.001L8.622 8.05l-5.701.453a1 1 0 0 0-.619 1.713l4.213 4.107-1.49 6.452a1 1 0 0 0 1.53 1.057L12 18.202l5.445 3.63a1.001 1.001 0 0 0 1.517-1.106l-1.829-6.4 4.536-4.082c.297-.268.406-.686.278-1.065z"
+                  ></path>
+                </svg>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  style="fill: rgba(247, 207, 38, 1)"
+                >
+                  <path
+                    d="M5.025 20.775A.998.998 0 0 0 6 22a1 1 0 0 0 .555-.168L12 18.202l5.445 3.63a1.001 1.001 0 0 0 1.517-1.106l-1.829-6.4 4.536-4.082a1 1 0 0 0-.59-1.74l-5.701-.454-2.467-5.461a.998.998 0 0 0-1.822-.001L8.622 8.05l-5.701.453a1 1 0 0 0-.619 1.713l4.214 4.107-1.491 6.452zM12 5.429l2.042 4.521.588.047h.001l3.972.315-3.271 2.944-.001.002-.463.416.171.597v.003l1.253 4.385L12 15.798V5.429z"
+                  ></path>
+                </svg>
+              </p>
+              <!-- <img class="testimonial__stars" src="img/estrellas.png" /> -->
+            </div>
+          </div>
+          <div class="testimonial">
+            <div class="testimonial__head">
+              <img
+                class="testimonial__img"
+                loading="lazy"
+                width="500"
+                height="300"
+                src="./assets/img/curso1.jpg"
+                alt=""
+              />
+              <div>
+                <h4 class="testimonial__nombre">Alex Maximilian</h4>
+                <span class="testimonial__fecha">1 Febrero 2019</span>
+              </div>
+            </div>
+            <div class="testimonial__body">
+              <p class="testimonial__parrafo">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolore
+                id optio sequi beatae cumque reprehenderit eveniet minima.
+              </p>
+              <p class="testimonial__stars">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  style="fill: rgba(247, 207, 38, 1); transform: scaleX(-1)"
+                >
+                  <path
+                    d="M21.947 9.179a1.001 1.001 0 0 0-.868-.676l-5.701-.453-2.467-5.461a.998.998 0 0 0-1.822-.001L8.622 8.05l-5.701.453a1 1 0 0 0-.619 1.713l4.213 4.107-1.49 6.452a1 1 0 0 0 1.53 1.057L12 18.202l5.445 3.63a1.001 1.001 0 0 0 1.517-1.106l-1.829-6.4 4.536-4.082c.297-.268.406-.686.278-1.065z"
+                  ></path>
+                </svg>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  style="fill: rgba(247, 207, 38, 1); transform: scaleX(-1)"
+                >
+                  <path
+                    d="M21.947 9.179a1.001 1.001 0 0 0-.868-.676l-5.701-.453-2.467-5.461a.998.998 0 0 0-1.822-.001L8.622 8.05l-5.701.453a1 1 0 0 0-.619 1.713l4.213 4.107-1.49 6.452a1 1 0 0 0 1.53 1.057L12 18.202l5.445 3.63a1.001 1.001 0 0 0 1.517-1.106l-1.829-6.4 4.536-4.082c.297-.268.406-.686.278-1.065z"
+                  ></path>
+                </svg>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  style="fill: rgba(247, 207, 38, 1); transform: scaleX(-1)"
+                >
+                  <path
+                    d="M21.947 9.179a1.001 1.001 0 0 0-.868-.676l-5.701-.453-2.467-5.461a.998.998 0 0 0-1.822-.001L8.622 8.05l-5.701.453a1 1 0 0 0-.619 1.713l4.213 4.107-1.49 6.452a1 1 0 0 0 1.53 1.057L12 18.202l5.445 3.63a1.001 1.001 0 0 0 1.517-1.106l-1.829-6.4 4.536-4.082c.297-.268.406-.686.278-1.065z"
+                  ></path>
+                </svg>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  style="fill: rgba(247, 207, 38, 1); transform: scaleX(-1)"
+                >
+                  <path
+                    d="M21.947 9.179a1.001 1.001 0 0 0-.868-.676l-5.701-.453-2.467-5.461a.998.998 0 0 0-1.822-.001L8.622 8.05l-5.701.453a1 1 0 0 0-.619 1.713l4.213 4.107-1.49 6.452a1 1 0 0 0 1.53 1.057L12 18.202l5.445 3.63a1.001 1.001 0 0 0 1.517-1.106l-1.829-6.4 4.536-4.082c.297-.268.406-.686.278-1.065z"
+                  ></path>
+                </svg>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  style="fill: rgba(247, 207, 38, 1)"
+                >
+                  <path
+                    d="M5.025 20.775A.998.998 0 0 0 6 22a1 1 0 0 0 .555-.168L12 18.202l5.445 3.63a1.001 1.001 0 0 0 1.517-1.106l-1.829-6.4 4.536-4.082a1 1 0 0 0-.59-1.74l-5.701-.454-2.467-5.461a.998.998 0 0 0-1.822-.001L8.622 8.05l-5.701.453a1 1 0 0 0-.619 1.713l4.214 4.107-1.491 6.452zM12 5.429l2.042 4.521.588.047h.001l3.972.315-3.271 2.944-.001.002-.463.416.171.597v.003l1.253 4.385L12 15.798V5.429z"
+                  ></path>
+                </svg>
+              </p>
+              <!-- <img class="testimonial__stars" src="img/estrellas.png" /> -->
+            </div>
+          </div>
+          <div class="testimonial">
+            <div class="testimonial__head">
+              <img
+                class="testimonial__img"
+                loading="lazy"
+                width="500"
+                height="300"
+                src="./assets/img/curso1.jpg"
+                alt=""
+              />
+              <div>
+                <h4 class="testimonial__nombre">Alex Maximilian</h4>
+                <span class="testimonial__fecha">1 Febrero 2019</span>
+              </div>
+            </div>
+            <div class="testimonial__body">
+              <p class="testimonial__parrafo">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolore
+                id optio sequi beatae cumque reprehenderit eveniet minima.
+              </p>
+              <p class="testimonial__stars">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  style="fill: rgba(247, 207, 38, 1); transform: scaleX(-1)"
+                >
+                  <path
+                    d="M21.947 9.179a1.001 1.001 0 0 0-.868-.676l-5.701-.453-2.467-5.461a.998.998 0 0 0-1.822-.001L8.622 8.05l-5.701.453a1 1 0 0 0-.619 1.713l4.213 4.107-1.49 6.452a1 1 0 0 0 1.53 1.057L12 18.202l5.445 3.63a1.001 1.001 0 0 0 1.517-1.106l-1.829-6.4 4.536-4.082c.297-.268.406-.686.278-1.065z"
+                  ></path>
+                </svg>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  style="fill: rgba(247, 207, 38, 1); transform: scaleX(-1)"
+                >
+                  <path
+                    d="M21.947 9.179a1.001 1.001 0 0 0-.868-.676l-5.701-.453-2.467-5.461a.998.998 0 0 0-1.822-.001L8.622 8.05l-5.701.453a1 1 0 0 0-.619 1.713l4.213 4.107-1.49 6.452a1 1 0 0 0 1.53 1.057L12 18.202l5.445 3.63a1.001 1.001 0 0 0 1.517-1.106l-1.829-6.4 4.536-4.082c.297-.268.406-.686.278-1.065z"
+                  ></path>
+                </svg>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  style="fill: rgba(247, 207, 38, 1); transform: scaleX(-1)"
+                >
+                  <path
+                    d="M21.947 9.179a1.001 1.001 0 0 0-.868-.676l-5.701-.453-2.467-5.461a.998.998 0 0 0-1.822-.001L8.622 8.05l-5.701.453a1 1 0 0 0-.619 1.713l4.213 4.107-1.49 6.452a1 1 0 0 0 1.53 1.057L12 18.202l5.445 3.63a1.001 1.001 0 0 0 1.517-1.106l-1.829-6.4 4.536-4.082c.297-.268.406-.686.278-1.065z"
+                  ></path>
+                </svg>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  style="fill: rgba(247, 207, 38, 1); transform: scaleX(-1)"
+                >
+                  <path
+                    d="M21.947 9.179a1.001 1.001 0 0 0-.868-.676l-5.701-.453-2.467-5.461a.998.998 0 0 0-1.822-.001L8.622 8.05l-5.701.453a1 1 0 0 0-.619 1.713l4.213 4.107-1.49 6.452a1 1 0 0 0 1.53 1.057L12 18.202l5.445 3.63a1.001 1.001 0 0 0 1.517-1.106l-1.829-6.4 4.536-4.082c.297-.268.406-.686.278-1.065z"
+                  ></path>
+                </svg>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  style="fill: rgba(247, 207, 38, 1)"
+                >
+                  <path
+                    d="M5.025 20.775A.998.998 0 0 0 6 22a1 1 0 0 0 .555-.168L12 18.202l5.445 3.63a1.001 1.001 0 0 0 1.517-1.106l-1.829-6.4 4.536-4.082a1 1 0 0 0-.59-1.74l-5.701-.454-2.467-5.461a.998.998 0 0 0-1.822-.001L8.622 8.05l-5.701.453a1 1 0 0 0-.619 1.713l4.214 4.107-1.491 6.452zM12 5.429l2.042 4.521.588.047h.001l3.972.315-3.271 2.944-.001.002-.463.416.171.597v.003l1.253 4.385L12 15.798V5.429z"
+                  ></path>
+                </svg>
+              </p>
+              <!-- <img class="testimonial__stars" src="img/estrellas.png" /> -->
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="partners">
+        <h2 class="partners__titulo">
+          <span class="partners__titulo--black">Patrocinadores</span>
+          Nuestros patrocinadores
+        </h2>
+        <div class="partners__logos">
+          <div class="partners__contenedor">
+            <picture>
+              <img
+                class="partners__img"
+                loading="lazy"
+                width="500"
+                height="300"
+                src="./assets/img/coursera.svg"
+                alt="logoCoursera"
+              />
+            </picture>
+            <picture>
+              <img
+                class="partners__img"
+                loading="lazy"
+                width="500"
+                height="300"
+                src="./assets/img/google-2015.svg"
+                alt="logoGoogle"
+              />
+            </picture>
+            <picture>
+              <img
+                class="partners__img"
+                loading="lazy"
+                width="500"
+                height="300"
+                src="./assets/img/udemy-wordmark-1.svg"
+                alt="logoUdemy"
+              />
+            </picture>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer id="footer" class="footer">
+      <div class="footer__grid footer__contenedor">
+        <div>
+          <h2 class="logo logo--footer">
+            <a href="index.html" class="logo__titulo logo__titulo--footer"
+              >CourseCity</a
+            >
+          </h2>
+        </div>
+        <div>
+          <h3 class="footer__titulo">Páginas</h3>
+          <nav class="nav nav--footer">
+            <a class="nav__link nav__link--footer" href="#">Inicio</a>
+            <a class="nav__link nav__link--footer" href="#">Nosotros</a>
+            <a class="nav__link nav__link--footer" href="#">Cursos</a>
+          </nav>
+        </div>
+        <div>
+          <h3 class="footer__titulo">Enlaces útiles</h3>
+          <nav class="nav nav--footer">
+            <a class="nav__link nav__link--footer" href="#"
+              >Política de privacidad</a
+            >
+            <a class="nav__link nav__link--footer" href="#"
+              >Términos y condiciones</a
+            >
+            <a class="nav__link nav__link--footer" href="#">Licencias</a>
+          </nav>
+        </div>
+        <div>
+          <h3 class="footer__titulo">Soporte</h3>
+          <nav class="nav nav--footer">
+            <a class="nav__link nav__link--footer" href="#"
+              >Preguntas frecuentes</a
+            >
+            <a class="nav__link nav__link--footer" href="#">Ayuda</a>
+          </nav>
+        </div>
+      </div>
+      <p class="footer__copy">
+        Todos los derechos reservados CourseCity &copy;
+      </p>
+    </footer>
+
+
+    <script src="./js/app.js"></script>
+  </body>
+</html>
