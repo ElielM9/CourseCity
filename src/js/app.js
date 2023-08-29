@@ -1,6 +1,8 @@
 // Variables
+
 // Nav
 const hamburguer = document.querySelector(`.hamburguer`);
+
 // Carrito
 const cart = document.querySelector(`#cart`);
 const listaCursos = document.querySelector(`#lista-cursos`);
