@@ -1,9 +1,7 @@
-// Variables
-
-// Nav
+// Variables Nav
 const hamburguer = document.querySelector(`.hamburguer`);
 
-// Carrito
+// Variables carrito
 const cart = document.querySelector(`#cart`);
 const listaCursos = document.querySelector(`#lista-cursos`);
 const contenedorCart = document.querySelector(`#lista-carrito tbody`);
@@ -36,9 +34,16 @@ function eventListeners() {
     articulosCarrito = []; // Resetear el arreglo
     cleanHTML();
   });
+
+  loadLocalStorage();
 }
 
 // Funciones
+function loadLocalStorage() {
+  articulosCarrito = JSON.parse(localStorage.getItem(`cart`)) || [];
+
+  shoppingCartHTML();
+}
 
 /**
  * La funcion `agregarCurso` se usa para añadir un curso al carrito de compras cuando se le da CLICK al boton con la clase
@@ -100,7 +105,7 @@ function leerDatosCurso(curso) {
     articulosCarrito = [...articulosCarrito, infoCurso];
   }
 
-  //   console.log(articulosCarrito);
+  // console.log(articulosCarrito);
 
   shoppingCartHTML();
 }
@@ -114,7 +119,7 @@ function leerDatosCurso(curso) {
 function eliminarCurso(e) {
   e.preventDefault();
 
-  if (e.target.classList.contains(`borrar-curso`)) {
+  if (e.target.classList.contains(`delete-btn`)) {
     // e.target.parentElement.parentElement.remove();
     const cursoId = e.target.getAttribute(`data-id`);
 
@@ -151,13 +156,22 @@ function shoppingCartHTML() {
         ${cantidad}
       </td>
       <td>
-        <a href="#" class="borrar-curso" data-id="${id}">X</a>
+        <a href="#">
+         <svg class="delete-btn delete-btn-icon" data-id="${id}" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" transform: ;msFilter:;"><path d="m16.192 6.344-4.243 4.242-4.242-4.242-1.414 1.414L10.535 12l-4.242 4.242 1.414 1.414 4.242-4.242 4.243 4.242 1.414-1.414L13.364 12l4.242-4.242z"></path></svg>
+        </a>
       </td>
       `;
 
     /* Añade el html generado al elemento `contenedorCart`. Significa que se añadirá como elemento hijo de `contenedorCart` normalmente se añade como un tbody */
     contenedorCart.appendChild(row);
   });
+
+  // Agregar carrito al storage
+  syncStorage();
+}
+
+function syncStorage() {
+  localStorage.setItem(`cart`, JSON.stringify(articulosCarrito));
 }
 
 /**

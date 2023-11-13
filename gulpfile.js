@@ -87,6 +87,7 @@ function cleanCSS(done) {
 function javaScript(done) {
   src(`src/js/**/*.js`)
     .pipe(sourcemaps.init())
+    .pipe(plumber())
     .pipe(terser())
     .pipe(sourcemaps.write())
     .pipe(dest(`public/js`));
