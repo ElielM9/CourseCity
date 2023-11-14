@@ -1,11 +1,12 @@
 // Variables Nav
 const hamburguer = document.querySelector(`.hamburguer`);
+const cartBtn = document.querySelector(`#cart .cart-icon`);
 
 // Variables carrito
-const cart = document.querySelector(`#cart`);
-const listaCursos = document.querySelector(`#lista-cursos`);
-const contenedorCart = document.querySelector(`#lista-carrito tbody`);
+const cartProducts = document.querySelector(`#cart-products`);
+const contenedorCart = document.querySelector(`#cart-list tbody`);
 const vaciarCartBtn = document.querySelector(`#vaciar-carrito`);
+const listaCursos = document.querySelector(`#lista-cursos`);
 let articulosCarrito = [];
 
 document.addEventListener(`DOMContentLoaded`, eventListeners);
@@ -18,6 +19,17 @@ function eventListeners() {
     nav.classList.toggle(`activo`);
   });
 
+  cartBtn.addEventListener(`click`, () => {
+    cartProducts.classList.toggle(`cart__products--active`);
+  });
+
+  window.addEventListener(`scroll`, () => {
+    const nav = document.querySelector(`.header__barra .nav`);
+
+    nav.classList.remove(`activo`);
+    cartProducts.classList.remove(`cart__products--active`);
+  });
+
   // Dar CLICK en agregar carrito manda a llamar a la funcion agregarCarrito
 
   /* La línea `listaCursos.addEventListener(`click`, agregarCurso);` añade un evento en el elemento
@@ -26,7 +38,7 @@ function eventListeners() {
 
   /* La línea `cart.addEventListener(`click`, eliminarCurso);` añade un evento en el elemento `cart`. 
   Dar CLICK en `cart`, llama a la funcion `eliminarCurso`. */
-  cart.addEventListener(`click`, eliminarCurso);
+  cartProducts.addEventListener(`click`, eliminarCurso);
 
   /* Esta línea añade un evento al elemento vaciarCartBtn`. 
   Dar CLICK a este elemento ejecuta el código dentro de la arrow function y vacía el carrito*/
@@ -125,7 +137,7 @@ function eliminarCurso(e) {
 
     // Eliminar del arreglo del carrito
     articulosCarrito = articulosCarrito.filter((curso) => curso.id !== cursoId);
-    console.log(articulosCarrito);
+    // console.log(articulosCarrito);
     shoppingCartHTML();
   }
 }
