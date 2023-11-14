@@ -345,10 +345,10 @@ section {
   top: 130%;
   right: 0;
   left: 0;
-  background-color: var(--grisClaro);
   padding: 1rem;
   min-height: 30rem;
   min-width: 37rem;
+  background-color: var(--grisClaro);
   z-index: 1;
 }
 
@@ -357,6 +357,17 @@ section {
     padding: 2rem;
     left: auto;
   }
+}
+
+.cart__footer{
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  border: none;
+}
+
+.cart__btns{
+  border: none;
 }
 
 .cart__btn {
@@ -373,6 +384,10 @@ section {
     border-color: red;
     color: red;
   }
+}
+
+.cart__total {
+  width: 100%;
 }
 
 .delete-btn-icon {
@@ -425,7 +440,7 @@ section {
   margin: 0;
 }
 
-.nosotros__texto {
+.nosotros__parrafo {
   margin-bottom: 2rem;
 }
 

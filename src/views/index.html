@@ -54,15 +54,18 @@
                 d="M5 22h14c1.103 0 2-.897 2-2V9a1 1 0 0 0-1-1h-3V7c0-2.757-2.243-5-5-5S7 4.243 7 7v1H4a1 1 0 0 0-1 1v11c0 1.103.897 2 2 2zM9 7c0-1.654 1.346-3 3-3s3 1.346 3 3v1H9V7zm-4 3h2v2h2v-2h6v2h2v-2h2l.002 10H5V10z"
               ></path>
             </svg>
-            <div class="cart__products cart__contenedor" id="cart-products">
-              <table class="cart__list--products" id="cart-list">
-                <tbody></tbody>
-              </table>
-
-              <a href="#" id="vaciar-carrito" class="cart__btn"
-                >Vaciar Carrito
-              </a>
-            </div>
+            <table class="cart__products cart__contenedor" id="cart-products">
+              <tbody class="cart__list--products" id="cart-list"></tbody>
+              <tfoot class="cart__footer">
+                <tr>
+                  <td colspan="5" class="cart__btns">
+                    <a href="#" id="vaciar-carrito" class="cart__btn">
+                      Vaciar Carrito
+                    </a>
+                  </td>
+                </tr>
+              </tfoot>
+            </table>
           </div>
         </div>
       </div>
@@ -87,18 +90,14 @@
             <span class="nosotros__titulo--black">Explora</span>
             Sobre nosotros
           </h2>
-          <p>
+          <p class="nosotros__parrafo">
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Mollitia
             nobis deserunt sapiente modi! Quod quidem vitae perspiciatis ab
             deleniti veniam, eum cum molestiae eveniet nisi praesentium
-            cupiditate sunt vel natus.
+            cupiditate sunt vel natus sapiente pariatur repudiandae tempora
+            porro quasi officia quos aliquam. Dolores rerum voluptate aliquid!
           </p>
-          <p>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officiis
-            repellat similique ullam mollitia aut aliquid? Magni perferendis
-            sapiente pariatur repudiandae tempora porro quasi officia quos
-            aliquam. Dolores rerum voluptate aliquid!
-          </p>
+          <a href="#" class="nosotros__btn">Iniciar Ahora</a>
         </div>
       </section>
       <section class="cursos">

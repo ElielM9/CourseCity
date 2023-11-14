@@ -4,7 +4,7 @@ const cartBtn = document.querySelector(`#cart .cart-icon`);
 
 // Variables carrito
 const cartProducts = document.querySelector(`#cart-products`);
-const contenedorCart = document.querySelector(`#cart-list tbody`);
+const contenedorCart = document.querySelector(`#cart-list`);
 const vaciarCartBtn = document.querySelector(`#vaciar-carrito`);
 const listaCursos = document.querySelector(`#lista-cursos`);
 let articulosCarrito = [];
@@ -45,6 +45,7 @@ function eventListeners() {
   vaciarCartBtn.addEventListener(`click`, () => {
     articulosCarrito = []; // Resetear el arreglo
     cleanHTML();
+    syncStorage();
   });
 
   loadLocalStorage();
