@@ -1,6 +1,6 @@
 // Variables Nav
 const hamburguer = document.querySelector(`.hamburguer`);
-const cartBtn = document.querySelector(`#cart .cart-icon`);
+const cartBtn = document.querySelector(`.cart__icons`);
 
 // Variables carrito
 const cartProducts = document.querySelector(`#cart-products`);
@@ -8,6 +8,9 @@ const contenedorCart = document.querySelector(`#cart-list`);
 const vaciarCartBtn = document.querySelector(`#vaciar-carrito`);
 const listaCursos = document.querySelector(`#lista-cursos`);
 let articulosCarrito = [];
+
+const cartCounter = document.querySelector(`#cart-counter`);
+const cartTotal = document.querySelector(`.cart__total--span`);
 
 document.addEventListener(`DOMContentLoaded`, eventListeners);
 
@@ -42,11 +45,7 @@ function eventListeners() {
 
   /* Esta línea añade un evento al elemento vaciarCartBtn`. 
   Dar CLICK a este elemento ejecuta el código dentro de la arrow function y vacía el carrito*/
-  vaciarCartBtn.addEventListener(`click`, () => {
-    articulosCarrito = []; // Resetear el arreglo
-    cleanHTML();
-    syncStorage();
-  });
+  vaciarCartBtn.addEventListener(`click`, cleanCart);
 
   loadLocalStorage();
 }
@@ -179,7 +178,30 @@ function shoppingCartHTML() {
     contenedorCart.appendChild(row);
   });
 
+  updateTotal();
   // Agregar carrito al storage
+  syncStorage();
+}
+
+function updateTotal() {
+  let total = 0;
+  let totalOfCourses = 0;
+
+  articulosCarrito.forEach((curso) => {
+    totalOfCourses += curso.cantidad;
+    total += parseInt(curso.cantidad * curso.precio.slice(1));
+  });
+
+  cartCounter.textContent = totalOfCourses;
+  cartTotal.textContent = `$${total}`;
+}
+
+function cleanCart() {
+  articulosCarrito = []; // Resetear el arreglo
+  cartCounter.textContent = 0;
+  cartTotal.textContent = `$0`;
+
+  cleanHTML();
   syncStorage();
 }
 
